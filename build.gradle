@@ -45,9 +45,9 @@ shadowJar {
     }
 }
 
-shadowJar {
-    destinationDir new File("C:\\Users\\Production\\Desktop\\coding\\dailyLangUtils\\build")
-}
+//shadowJar {
+//    destinationDir new File("C:\\Users\\Production\\Desktop\\coding\\dailyLangUtils\\build")
+//}
 
 compileJava.dependsOn clean
 build.dependsOn shadowJar
