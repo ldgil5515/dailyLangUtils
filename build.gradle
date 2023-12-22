@@ -3,7 +3,6 @@ plugins {
     id 'idea'
     id 'eclipse'
     id 'maven-publish'
-    id 'com.github.johnrengelman.shadow' version '7.0.0'
 }
 
 apply plugin: 'maven-publish'
@@ -29,8 +28,4 @@ tasks.withType(JavaCompile){
 dependencies {
     implementation 'com.github.ldgil5515:dailyLangUtils:1.0.0'
     compileOnly group: 'org.spigotmc', name: 'spigot-api', version: '1.17.1-R0.1-SNAPSHOT'
-}
-
-shadowJar {
-    archiveClassifier.set('')
 }
