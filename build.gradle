@@ -10,9 +10,16 @@ plugins {
 
 apply plugin: 'maven-publish'
 
-group 'com.appletalk'
-def pluginVersion = '1.0.0'
-version '1.0.0'
+group = 'com.github.ldgil5515'
+version = '1.0.0'
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.ldgil5515:dailyLangUtils:1.0.0'
+}
 
 repositories {
     mavenCentral()
@@ -28,36 +35,6 @@ tasks.withType(JavaCompile){
 
 dependencies {
     compileOnly group: 'org.spigotmc', name: 'spigot-api', version: '1.17.1-R0.1-SNAPSHOT'
-}
-
-shadowJar {
-    manifest {
-        attributes(
-                'Built-By': System.properties['user.name'],
-                'Version': pluginVersion,
-                'Build-Timestamp': new SimpleDateFormat("yyyy-MM-dd' 'HH:mm:ss.SSSZ").format(new Date()),
-                'Created-By': "Gradle ${gradle.gradleVersion}",
-                'Build-Jdk': "${System.properties['java.version']} " +
-                        "(${System.properties['java.vendor']} ${System.properties['java.vm.version']})",
-                'Build-OS': "${System.properties['os.name']} ${System.properties['os.arch']} " +
-                        "${System.properties['os.version']}"
-        )
-    }
-}
-
-//shadowJar {
-//    destinationDir new File("C:\\Users\\Production\\Desktop\\coding\\dailyLangUtils\\build")
-//}
-
-compileJava.dependsOn clean
-build.dependsOn shadowJar
-
-publishing {
-    publications {
-        shadow(MavenPublication) {
-            artifact shadowJar
-        }
-    }
 }
 
 publishing {
