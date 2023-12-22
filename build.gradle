@@ -35,9 +35,8 @@ publishing {
             groupId = 'com.github.ldgil5515'
             artifactId = 'dailyLangUtils'
             version = '1.0.0'
-
+            artifact 'dailyLangUtils-1.0.0.jar'
             from components.java
         }
     }
-
 }
