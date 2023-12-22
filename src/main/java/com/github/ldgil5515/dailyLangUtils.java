@@ -1,4 +1,4 @@
-package com.appletalk.dailyPlugin;
+package com.github.ldgil5515;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
