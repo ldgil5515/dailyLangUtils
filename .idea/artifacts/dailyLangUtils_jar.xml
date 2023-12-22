@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="dailyLangUtils:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/dailyLangUtils_jar</output-path>
+    <root id="archive" name="dailyLangUtils.jar">
+      <element id="module-output" name="dailyLangUtils.main" />
+    </root>
+  </artifact>
+</component>
