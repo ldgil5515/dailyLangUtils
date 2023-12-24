@@ -1,16 +1,7 @@
 plugins {
-    id 'java'
-    id 'idea'
-    id 'eclipse'
     id 'maven-publish'
+    id 'java'
 }
-
-apply plugin: 'maven-publish'
-
-group 'com.github.ldgil5515'
-version '1.0.0'
-
-
 
 compileJava.options.encoding = 'UTF-8'
 
@@ -18,25 +9,30 @@ tasks.withType(JavaCompile){
     options.encoding = "UTF-8"
 }
 
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        mavenCentral()
 
-    maven { url "https://jitpack.io" } // 이 주소를 추가합니다.
-    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+        maven { url "https://jitpack.io" } // 이 주소를 추가합니다.
+        maven { url 'https://repo.papermc.io/repository/maven-public/' }
+    }
+
+    group = 'com.github.ldgil5515'
 }
+
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
     implementation 'com.github.ldgil5515:dailyLangUtils:1.0.0'
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId = 'com.github.ldgil5515'
-            artifactId = 'dailyLangUtils'
-            version = '1.0.0'
-            artifact 'dailyLangUtils-1.0.0.jar'
-            from components.java
-        }
-    }
-}
+//publishing {
+//    publications {
+//        mavenJava(MavenPublication) {
+//            groupId = 'com.github.ldgil5515'
+//            artifactId = 'dailyLangUtils'
+//            version = '1.0.0'
+//            artifact 'dailyLangUtils-1.0.0.jar'
+//            from components.java
+//        }
+//    }
+//}
