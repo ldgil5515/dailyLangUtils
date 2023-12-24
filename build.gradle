@@ -22,12 +22,16 @@ dependencies {
     implementation 'com.github.ldgil5515:dailyLangUtils:1.0.0'
 }
 
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId = 'com.github.ldgil5515'
             artifactId = 'dailyLangUtils'
-            version = '1.0.3'
+            version = '1.0.4'
 
             from components.java
         }
