@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.github.ldgil5515.dailyLangUtils.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.github.ldgil5515.dailyLangUtils.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/dailyLangUtils.main.iml" filepath="$PROJECT_DIR$/.idea/modules/dailyLangUtils.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workspace.dailyLangUtils.main.iml" filepath="$PROJECT_DIR$/.idea/modules/workspace.dailyLangUtils.main.iml" />
     </modules>
   </component>
 </project>
