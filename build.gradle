@@ -10,6 +10,13 @@ plugins {
     id 'maven-publish'
 }
 
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
     implementation 'com.github.ldgil5515:dailyLangUtils:1.0.0'
@@ -20,7 +27,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId = 'com.github.ldgil5515'
             artifactId = 'dailyLangUtils'
-            version = '1.0.2'
+            version = '1.0.3'
 
             from components.java
         }
