@@ -31,7 +31,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId = 'com.github.ldgil5515'
             artifactId = 'dailyLangUtils'
-            version = '1.0.4'
+            version = '1.0.5'
 
             from components.java
         }
